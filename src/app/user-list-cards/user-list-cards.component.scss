@@ -1,0 +1,29 @@
+.user-name{
+    font-size: 16px;
+}
+.custom-btns{
+    background-color: #EB5757;
+    border: none;
+    width: 100%;
+    color: #fff;
+    padding:10px 10px;
+}
+.card{
+    position: relative;
+    border: 1px solid #f5f3f3;
+    box-shadow: 1px 4px 8px rgb(0 0 0 / 6%);
+    padding: 5px;
+    border-radius: 5px;
+}
+.icon-bg{
+    position: absolute;
+    right: 10px;
+    top: 10px;
+}
+.card-link{
+    color: rgb(45, 45, 126);
+    text-decoration: underline;
+    &:hover{
+        cursor: pointer;
+    }
+}

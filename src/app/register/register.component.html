@@ -1,0 +1,89 @@
+<div class="container">
+    <div class="user-wrapper">
+      <form class="example-form" [formGroup]="registerForm">
+        <div class="col-md-8">
+          <div class="row">
+            <div class="col-md-12">
+              <div class="form-title">Create new user</div>
+            </div>
+            <div class="col-md-6">
+              <div class="form-field">
+                <mat-label class="label">Name</mat-label>
+                <mat-form-field class="example-full-width form-input" appearance="fill">
+                  <input type="email" matInput placeholder="John Doe" formControlName="name">
+                  <mat-error *ngIf="emailFormControl.hasError('email') && !emailFormControl.hasError('required')">
+                    Please enter a valid email address
+                  </mat-error>
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <mat-label>Email</mat-label>
+              <mat-form-field class="example-full-width form-input" appearance="fill">
+                <input type="email" matInput placeholder="example@domain.com" formControlName="email">
+              </mat-form-field>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+              <div class="form-field">
+                <mat-label>Phone</mat-label>
+                <mat-form-field class="example-form-field form-input" appearance="fill">
+                  <input type="email" matInput placeholder="+91-012345678" formControlName="phone">
+                </mat-form-field>
+              </div>
+            </div>
+            <div class="col-md-6">
+              <mat-label>Website</mat-label>
+              <mat-form-field class="example-full-width form-input" appearance="fill">
+                <input type="email" matInput placeholder="example.com" formControlName="website">
+              </mat-form-field>
+            </div>
+          </div>
+        </div>
+        <div class="create">
+          <button class="create-btn" (click)="register()">Create User</button>
+        </div>
+      </form>
+      <app-user-list-cards [mode]="mode" (editEvent)="editUser($event)" [userData]="userData"></app-user-list-cards>
+      <!-- <hr class="devider"> -->
+      <!-- <div class="col-md-12">
+        <div class="form-title mrgn">Uer details</div>
+      </div> -->
+      <!-- <div class="users-list">
+        <table class="table table table-striped-custom">
+          <thead>
+            <tr>
+              <th scope="col">#</th>
+              <th scope="col">Name</th>
+              <th scope="col">Phone</th>
+              <th scope="col">Email</th>
+              <th scope="col">Website</th>
+              <th scope="col">Actions</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td class="d-flex"><button class="icon-bg"><img src="assets/images/edit_icon.svg"></button><button
+                  class="icon-bg"><img src="assets/images/delete_icon.svg"></button></td>
+            </tr>
+            <tr>
+              <th scope="row">1</th>
+              <td>Mark</td>
+              <td>Otto</td>
+              <td>@mdo</td>
+              <td>@mdo</td>
+              <td class="d-flex"><button class="icon-bg"><img src="assets/images/edit_icon.svg"></button><button
+                  class="icon-bg"><img src="assets/images/delete_icon.svg"></button></td>
+            </tr>
+          </tbody>
+        </table>
+      </div> -->
+    </div>
+    
+  </div>

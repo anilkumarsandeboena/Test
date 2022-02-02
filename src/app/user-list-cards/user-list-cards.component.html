@@ -1,0 +1,20 @@
+<div class="row mt-3">
+    <div class="col-md-4" *ngFor="let list of users;let i=index">
+        <div class="card">
+            <button class="icon-bg" (click)="deleteUser(list, i)"
+            ><img src="assets/images/delete_icon.svg"></button> <!-- (click)="deleteUser(i)" -->
+            <div class="card-body">
+              <h5 class="user-name" (click)="editUser(list)">{{list.name}}</h5>
+              <h6 class="card-subtitle mb-2 text-muted">{{list.email}}</h6>
+              <p class="card-text">{{list.phone}}</p>
+              <span class="card-link">{{list.link}}</span>
+            </div>
+            <div class="row">
+                <!-- <div class="col-md-6">
+                    <button class="custom-btns"
+                ><img src="assets/images/edit_icon.svg"> Edit</button>
+                </div> -->
+            </div>
+          </div>
+    </div>
+</div>
