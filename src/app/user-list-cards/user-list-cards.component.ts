@@ -20,8 +20,7 @@ export class UserListCardsComponent implements OnInit, OnChanges {
   users: any = [];
   constructor(private userService: UserService) {}
 
-  ngOnInit(): void {
-  }
+  ngOnInit(): void {}
   ngOnChanges(): void {
     if (this.mode == 'edit') {
       console.log(this.userData);

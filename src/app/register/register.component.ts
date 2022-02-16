@@ -41,7 +41,6 @@ export class RegisterComponent implements OnInit {
       email: controls?.email.value,
       phone: controls?.phone.value,
       website: controls?.website.value,
-      
     };
     if (this.registerForm.invalid) {
       return;

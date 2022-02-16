@@ -7,6 +7,6 @@ import { MatTableModule } from '@angular/material/table';
 
 @NgModule({
   declarations: [],
-  exports: [MatInputModule, MatFormFieldModule, FormsModule, MatTableModule],
+  exports: [MatInputModule, MatFormFieldModule, FormsModule, MatTableModule, ],
 })
 export class MaterialModule {}
