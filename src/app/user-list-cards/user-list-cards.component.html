@@ -1,20 +1,35 @@
 <div class="row mt-3">
     <div class="col-md-4" *ngFor="let list of users;let i=index">
         <div class="card">
-            <button class="icon-bg" (click)="deleteUser(list, i)"
-            ><img src="assets/images/delete_icon.svg"></button> <!-- (click)="deleteUser(i)" -->
+            <button class="icon-bg" (click)="deleteUser(list, i)"><img src="assets/images/delete_icon.svg"></button>
             <div class="card-body">
-              <h5 class="user-name" (click)="editUser(list)">{{list.name}}</h5>
-              <h6 class="card-subtitle mb-2 text-muted">{{list.email}}</h6>
-              <p class="card-text">{{list.phone}}</p>
-              <span class="card-link">{{list.link}}</span>
+                <div class="d-flex align-items-center">
+                    <div><img src="assets/images/user.svg"></div>
+                    <div>
+                        <h5 class="user-name" (click)="editUser(list)">{{list.name}}</h5>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <div>
+                        <img src="assets/images/mail.svg">
+                    </div>
+                    <div>
+                        <h6 class="card-subtitle mb-2 text-muted">{{list.email}}</h6>
+                    </div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <div>
+                        <img src="assets/images/phone.svg">
+                    </div>
+                    <div><p class="card-text">{{list.phone}}</p></div>
+                </div>
+                <div class="d-flex align-items-center mt-2">
+                    <div>
+                        <img src="assets/images/globe.svg">
+                    </div>
+                    <div><span class="card-link">{{list.website}}</span></div>
+                </div>
             </div>
-            <div class="row">
-                <!-- <div class="col-md-6">
-                    <button class="custom-btns"
-                ><img src="assets/images/edit_icon.svg"> Edit</button>
-                </div> -->
-            </div>
-          </div>
+        </div>
     </div>
 </div>

@@ -5,6 +5,9 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
   providedIn: 'root'
 })
 export class UserService {
+  clear() {
+    throw new Error('Method not implemented.');
+  }
 
   apiName="https://jsonplaceholder.typicode.com/"
   constructor(private http: HttpClient) { }
@@ -28,4 +31,5 @@ export class UserService {
   deleteUser(id:any){
     return this.http.delete(this.apiName + `users/${id}`);
   }
+  
 }

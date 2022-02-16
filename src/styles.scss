@@ -69,7 +69,7 @@ mat-label {
     padding-bottom: 10px;
 }
 .form-field {
-    margin-bottom: 20px;
+    margin-bottom: 35px;
 }
 .create-btn {
     border: 1px solid #f5f3f3;
@@ -85,6 +85,9 @@ mat-label {
 .mrgn {
     margin-top: 20px !important;
     margin-bottom: 10px !important;
+}
+.mat-error {
+    margin-top: 20px;
 }
 //Table css
 .users-list {
